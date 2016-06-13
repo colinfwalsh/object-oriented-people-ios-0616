@@ -10,10 +10,10 @@
 
 @interface FISPerson ()
 
-@property (strong, readwrite) NSString* name;
-@property (readwrite) NSUInteger ageInYears;
-@property (readwrite) NSUInteger heightInInches;
-@property (strong, readwrite) NSMutableArray* skills;
+//@property (strong, readonly) NSString* name;
+//@property (readwrite) NSUInteger ageInYears;
+//@property (readwrite) NSUInteger heightInInches;
+//@property (strong, readwrite) NSMutableArray* skills;
 
 @end
 
@@ -40,7 +40,7 @@
 
 - (NSString*)celebrateBirthday{
     
-    self.ageInYears = self.ageInYears + 1;
+    _ageInYears = _ageInYears + 1;
     
     NSString* ordinal = [self ordinalForInteger:self.ageInYears];
     
